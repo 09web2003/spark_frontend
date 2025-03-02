@@ -1,0 +1,166 @@
+.add-link-main {
+  width: 100%;
+  height: 100vh;
+  background-color: rgb(247, 242, 242);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.add-links-btn {
+  width: 80%;
+  height: 10vh;
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  justify-content: start;
+  margin: 0 auto;
+}
+.add-link-btnx, .add-shop-btnx:hover {
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  border: none;
+  color: white;
+  font-family: "Inter";
+  background-color: #28a263;
+  width: 20%;
+  cursor: pointer;
+}
+.add-shop-btnx{
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    border: none;
+    color: #9f8f8f;
+    font-family: "Inter";
+    background-color: #e2e5de;
+    width: 20%;
+}
+.links-container{
+    width: 90%;
+    height: 60vh;
+    background-color: white;
+    border-radius: 20px;
+    margin: 0 auto;
+    box-shadow: 1px 1px 5px rgb(223, 219, 219);
+}
+.links-headingfour{
+    font-family: "poppins";
+    font-size: 1.5rem;
+    font-weight: 600;
+    width: 90%;
+    margin: 0 auto;
+    
+}
+.link-tittlemain{
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    height: 40%;
+    
+    margin: 0 auto;
+    gap: 1rem;
+}
+.link-tittlecontainer{
+    display: flex;
+    width: 100%;
+    height: fit-content;
+    position: relative;
+    margin-top: 2rem;
+}
+.link-urlmain{
+    display: flex;
+    width: 100%;
+    height: fit-content;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.link-field,.link-urlcontainer{
+    width: 50%;
+    height: fit-content;
+}
+.link-input{
+width: 100%;
+height: 6vh;
+border-radius: 20px;
+border: 1px solid gray;
+margin-left: 0;
+padding: 0 0.5rem;
+font-size: 1rem;
+font-weight: 500;
+background-color: white;
+}
+.fa-toggle-off{
+position: absolute;
+right: 0;
+font-size: 2rem;
+color: gray;
+cursor: pointer;
+}
+.delete-icon{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+}
+.fa-clone{
+    font-size: 2rem;
+    color: gray;
+    cursor: pointer;
+}
+.fa-trash-can{
+    font-size: 2rem;
+    color: gray;
+    cursor: pointer;
+}
+.line-line{
+    width: 100%;
+    height: 0.3rem;
+    background-color: rgb(231, 224, 224);
+}
+
+.application-main{
+display: flex;
+width: 90%;
+height: 30vh;
+flex-direction: column;
+margin: 0 auto;
+margin-top: 1rem;
+gap: 2rem;
+}
+.application-uppar{
+    display: flex;
+    gap: 2rem;
+}
+
+.application-uppar > div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+}
+
+.fa-square-instagram,.fa-square-facebook,.fa-youtube,.fa-x-twitter{
+    font-size: 2rem;
+}
+.fa-square-instagram{
+    color: rgb(188, 17, 46);
+}
+.fa-square-facebook{
+    color: blue;
+}
+.fa-youtube{
+    color: red;
+}
+.fa-x-twitter{
+color: black;
+}
+.application-down{
+display: flex;
+gap: 0.7rem;
+}
+.insta,.youtube,.facebook{
+    font-size: 0.7rem;
+    font-weight: 600;
+}
+

@@ -1,0 +1,400 @@
+.update {
+  width: 100%;
+  height: 100vh;
+}
+body {
+  background-color: rgb(247, 242, 242);
+}
+.update-formsave {
+  width: 80%;
+  height: 70vh;
+  background-color: white;
+  margin: 0 auto;
+  margin-top: 3rem;
+  border-radius: 10px;
+}
+.password-showhide {
+  position: relative;
+}
+.show-hide-btnsave {
+  position: absolute;
+  left: 25rem;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+  color: #888;
+}
+.update-formsave h5 {
+  font-family: "poppins";
+  color: #29a263;
+  font-weight: normal;
+  padding-top: 2rem;
+  margin-left: 4rem;
+}
+.linesave {
+  width: 90%;
+  height: 0.1rem;
+  background-color: #29a263;
+  margin: 0 auto;
+}
+input {
+  display: block;
+}
+.label-formsave {
+  color: #928888;
+  font-size: 1rem;
+  margin-left: 1.8rem;
+}
+.input-formsave {
+  width: 40%;
+  height: 2.2rem;
+  border: 1px solid #8d8787;
+  outline: none;
+  border-radius: 8px;
+  margin-bottom: 0.5rem;
+  background-color: white;
+}
+
+.submit-btnsave {
+  margin-top: 1rem;
+  padding: 0.5rem 3rem;
+  border-radius: 10px;
+  background-color: #29a263;
+  border: none;
+  color: white;
+  font-weight: 600;
+  cursor: pointer;
+  position: absolute;
+  right: 3rem;
+}
+.submissionsave {
+  position: relative;
+  margin-top: 3rem;
+  margin-left: 3rem;
+}
+@media (max-width: 321px) {
+  .edit-profile {
+    display: none;
+  }
+  .linesave {
+    display: none;
+  }
+  .update {
+    width: 100%;
+    height: 80vh;
+  }
+  .update-formsave {
+    width: 90%;
+    height: 60vh;
+    background-color: rgb(247, 242, 242);
+    margin: 0 auto;
+    border-radius: 10px;
+  }
+  .password-showhide {
+    position: relative;
+  }
+  .show-hide-btnsave {
+    position: absolute;
+    left: 15rem;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    color: #888;
+  }
+  input {
+    display: block;
+  }
+  .label-formsave {
+    color: #928888;
+    font-size: 1rem;
+    margin-left: 0;
+  }
+  .input-formsave {
+    width: 100%;
+    height: 2rem;
+    /* padding: 0.3rem; */
+    border: 1px solid #8d8787;
+    outline: none;
+    border-radius: 8px;
+    margin-bottom: 0.5rem;
+    background-color: rgb(247, 242, 242);
+    margin-left: 0;
+  }
+
+  .submit-btnsave {
+    right: 2rem;
+  }
+  .submissionsave {
+    margin-left: 0;
+    margin-top: 1rem;
+  }
+}
+@media (min-width:321px) and (max-width:376px){
+  .edit-profile {
+    display: none;
+  }
+  .linesave {
+    display: none;
+  }
+  .update {
+    width: 100%;
+    height: 80vh;
+  }
+  .update-formsave {
+    width: 90%;
+    height: 60vh;
+    background-color: rgb(247, 242, 242);
+    margin: 0 auto;
+    border-radius: 10px;
+  }
+  .password-showhide {
+    position: relative;
+  }
+  .show-hide-btnsave {
+    position: absolute;
+    left: 18rem;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    color: #888;
+  }
+  input {
+    display: block;
+  }
+  .label-formsave {
+    color: #928888;
+    font-size: 1rem;
+    margin-left: 0;
+  }
+  .input-formsave {
+    width: 100%;
+    height: 2rem;
+    border: 1px solid #8d8787;
+    outline: none;
+    border-radius: 8px;
+    margin-bottom: 0.5rem;
+    background-color: rgb(247, 242, 242);
+    margin-left: 0;
+  }
+
+  .submit-btnsave {
+    right: 2rem;
+  }
+  .submissionsave {
+    margin-left: 0;
+    margin-top: 1rem;
+  }
+}
+
+@media (min-width:376px) and (max-width:426px){
+  .edit-profile {
+    display: none;
+  }
+  .linesave {
+    display: none;
+  }
+  .update {
+    width: 100%;
+    height: 80vh;
+  }
+  .update-formsave {
+    width: 90%;
+    height: 60vh;
+    background-color: rgb(247, 242, 242);
+    margin: 0 auto;
+    border-radius: 10px;
+  }
+  .password-showhide {
+    position: relative;
+  }
+  .show-hide-btnsave {
+    position: absolute;
+    left: 20rem;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    color: #888;
+  }
+  input {
+    display: block;
+  }
+  .label-formsave {
+    color: #928888;
+    font-size: 1rem;
+    margin-left: 0;
+  }
+  .input-formsave {
+    width: 100%;
+    height: 2rem;
+    /* padding: 0.3rem; */
+    border: 1px solid #8d8787;
+    outline: none;
+    border-radius: 8px;
+    margin-bottom: 0.5rem;
+    background-color: rgb(247, 242, 242);
+    margin-left: 0;
+  }
+
+  .submit-btnsave {
+    right: 2rem;
+  }
+  .submissionsave {
+    margin-left: 0;
+    margin-top: 1rem;
+  }
+}
+
+
+@media (min-width:426px) and (max-width:769px){
+  .edit-profile {
+    display: none;
+  }
+  .linesave {
+    display: none;
+  }
+  .update {
+    width: 100%;
+    height: 80vh;
+  }
+  .update-formsave {
+    width: 65%;
+    height: 60vh;
+    background-color: rgb(247, 242, 242);
+    margin: 0 auto;
+    border-radius: 10px;
+  }
+  .password-showhide {
+    position: relative;
+  }
+  .show-hide-btnsave {
+    position: absolute;
+    left: 25rem;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    color: #888;
+  }
+  input {
+    display: block;
+  }
+  .label-formsave {
+    color: #928888;
+    font-size: 1rem;
+    margin-left: 0;
+  }
+  .input-formsave {
+    width: 100%;
+    height: 2rem;
+    border: 1px solid #8d8787;
+    outline: none;
+    border-radius: 8px;
+    margin-bottom: 0.5rem;
+    background-color: rgb(247, 242, 242);
+    margin-left: 0;
+  }
+
+  .submit-btnsave {
+    right: 2rem;
+  }
+  .submissionsave {
+    margin-left: 0;
+    margin-top: 1rem;
+  }
+}
+
+@media (min-width:769px) and (max-width:1025px){
+  
+  .update-formsave {
+    width: 80%;
+    height: 70vh;
+    background-color: white;
+    margin: 0 auto;
+    margin-top: 2rem;
+  }
+  .password-showhide {
+    position: relative;
+  }
+  .show-hide-btnsave {
+    position: absolute;
+    left: 20rem;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    color: #888;
+  }
+  .update-formsave h5 {
+    padding-top: 1rem;
+   
+  }
+  
+  input {
+    display: block;
+  }
+  .label-formsave {
+    color: #928888;
+    font-size: 1rem;
+    margin-left: 1.8rem;
+  }
+  .input-formsave {
+    width: 60%;
+    height: 2rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  .submit-btnsave {
+    margin-top: 2rem;
+  }
+  .submissionsave {
+    position: relative;
+    margin-top: 2rem;
+    margin-left: 3rem;
+  }
+}
+
+@media (min-width:1025px) and (max-width:1441px){
+  
+  .update-formsave {
+    width: 80%;
+    height: 70vh;
+    background-color: white;
+    margin: 0 auto;
+    margin-top: 2rem;
+  }
+  .password-showhide {
+    position: relative;
+  }
+  .show-hide-btnsave {
+    position: absolute;
+    left: 25rem;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    color: #888;
+  }
+  .update-formsave h5 {
+    padding-top: 1rem;
+  }
+  
+  input {
+    display: block;
+  }
+  .label-formsave {
+    color: #928888;
+    font-size: 1rem;
+    margin-left: 1.8rem;
+  }
+  .input-formsave {
+    width: 50%;
+    height: 2.2rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  .submit-btnsave {
+    margin-top: 2rem;
+  }
+  .submissionsave {
+    position: relative;
+    margin-top: 2rem;
+    margin-left: 3rem;
+  }
+}

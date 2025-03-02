@@ -1,0 +1,977 @@
+.link-div {
+  width: 100%;
+  height: 100vh;
+}
+body {
+  background-color: rgb(247, 242, 242);
+}
+.user-profile {
+  width: 100%;
+  height: 80vh;
+  margin-top: 2.5rem;
+  display: flex;
+}
+.user-left {
+  width: 40%;
+  height: 80vh;
+}
+
+.user-right {
+  width: 60%;
+  height: 75vh;
+}
+.user-heading {
+  font-family: "inter";
+}
+.bio {
+  width: 70%;
+  height: 40vh;
+  background-color: white;
+  border-radius: 20px;
+  margin-top: 1.5rem;
+}
+.img-show {
+  width: 5rem;
+  height: 5rem;
+  border-radius: 50%;
+  margin-top: 1rem;
+  margin-left: 1rem;
+}
+.img-show img {
+  width: 5rem;
+  height: 5rem;
+  border-radius: 50%;
+  object-fit: cover;
+  background: #DFDFDF;
+}
+.addremove {
+  height: 15vh;
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+  margin-right: 2rem;
+  margin-top: 0.8rem;
+}
+.addremove input {
+  display: none;
+}
+.add-img {
+  padding: 0.8rem 10rem;
+  font-family: "Inter";
+  color: white;
+  border-radius: 20px;
+  border: none;
+  background-color: #28a263;
+  cursor: pointer;
+}
+.remove-img {
+  padding: 0.8rem 10rem;
+  font-family: "Inter";
+  color: white;
+  border-radius: 20px;
+  border: none;
+  background-color: white;
+  color: #afa3a3;
+  cursor: pointer;
+  border: 1px solid #afa3a3;
+}
+.bio-uppar {
+  display: flex;
+  flex-direction: row;
+}
+.bio-text {
+  width: 90%;
+  height: 20vh;
+  margin: 0 auto;
+}
+.user-text {
+  margin-left: 2rem;
+  margin-bottom: 1rem;
+}
+.user-text input {
+  width: 100%;
+  height: 6vh;
+  border: none;
+  background-color: #e2e5de;
+  margin-top: 1rem;
+  outline: none;
+  resize: none;
+  color: black;
+  font-family: "Inter";
+  padding: 2%;
+  border-radius: 10px;
+  margin-left: 0rem;
+}
+.user-text input::placeholder {
+  color: #8b7d7d;
+  font-family: "Inter";
+}
+.user-bio {
+  margin-left: 2rem;
+  margin-bottom: 1rem;
+}
+.user-bio textarea {
+  width: 100%;
+  height: 10vh;
+  border: none;
+  background-color: #e2e5de;
+  resize: none;
+  outline: none;
+  color: black;
+  font-family: "Inter";
+  padding: 2%;
+  border-radius: 8px;
+}
+.user-bio textarea::placeholder {
+  color: #8b7d7d;
+  font-family: "Inter";
+}
+.add-btn {
+  width: 70%;
+  height: fit-content!important;
+  padding-bottom: 2rem;
+  background-color: white;
+  border-radius: 10px;
+  margin-top: 2rem;
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 2rem;
+}
+.linkshop-btn {
+  width: 80%;
+  height: 7vh;
+  margin-top: 1rem;
+  margin-left: 1rem;
+}
+.add-link {
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  border: none;
+  color: white;
+  font-family: "Inter";
+  background-color: #28a263;
+}
+
+.add-shop {
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  border: none;
+  color: #9f8f8f;
+  font-family: "Inter";
+  background-color: #e2e5de;
+}
+
+.add-shop:hover, .add-shop:focus {
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  border: none;
+  color: white;
+  font-family: "Inter";
+  background-color: #28a263;
+}
+
+.plus-add button {
+  background-color: #28a263;
+  padding: 0.5rem 13rem;
+  color: white;
+  border: none;
+  border-radius: 20px;
+  font-family: "Inter";
+  width: 97%;
+}
+.plus-add button span {
+  font-size: 1.3rem;
+}
+.plus-add {
+  margin-top: 1rem;
+  margin-left: 1rem;
+}
+.custom-bg {
+  width: 100%;
+  height: 70vh;
+  margin-top: 2rem;
+}
+.custom-colourdiv {
+  width: 70%;
+  height: 50vh;
+  background-color: white;
+  border-radius: 20px;
+  padding-top: 1.5rem;
+  margin-top: 1rem;
+}
+.user-bg {
+  width: 90%;
+  height: 25vh;
+  background-color: #342b26;
+  margin-top: 1rem;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  border-radius: 5px;
+}
+.user-bg img {
+  width: 4rem;
+  height: 4rem;
+  border-radius: 50%;
+  object-fit: cover;
+  background: #DFDFDF;
+}
+.user-bg h3 {
+  font-family: "poppins";
+  color: white;
+}
+.user-bg p {
+  font-family: "poppins";
+  color: white;
+  font-size: 0.8rem;
+}
+.custom-colourdiv h4 {
+  font-family: "poppins";
+  margin-top: 0.5rem;
+  font-weight: 500;
+  font-size: 0.6rem;
+  margin-left: 1rem;
+}
+.three-color {
+  width: 30%;
+  display: flex;
+  height: 8vh;
+  margin-left: 1rem;
+  gap: 0.5rem;
+  align-items: center;
+  justify-content: center;
+}
+.brown,
+.gray,
+.black {
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 50%;
+  cursor: pointer;
+  border: 0.8px solid #0000002E;
+}
+.brown {
+  background-color: #342b26;
+}
+.gray {
+  background-color: gray;
+}
+.black {
+  background-color: black;
+}
+.save-btn {
+  width: 70%;
+  height: 5vh;
+  margin-top: 2rem;
+  position: relative;
+}
+.save-btn button{
+  padding: 0.5rem 4rem;
+  border: none;
+  border-radius: 10px;
+  background-color: #28a263;
+  color: white;
+  position: absolute;
+  right: 0;
+  cursor: pointer;
+}
+.hexa-colour{
+  width: 30%;
+  height: 5vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.4rem;
+}
+.hexa-box{
+  width: 2rem;
+  height: 2rem;
+  background-color: black;
+  border-radius: 8px;
+}
+
+@media (max-width:321px){
+  .user-right {
+    width: 90%;
+    height: 70vh;
+    overflow-y: auto;
+    margin: 0 auto;
+  }
+  .user-left {
+    display: none;
+  }
+  .user-heading {
+    font-family: "inter";
+  }
+  .bio {
+    width: 100%;
+    height: fit-content;
+    padding: 0 0 5vh 0;
+    margin-top: 1rem;
+    gap: 1rem;
+  }
+  .img-show {
+    width: 3rem;
+    height: 3rem;
+  }
+  .img-show img {
+    width: 3rem;
+    height: 3rem;
+  }
+  .addremove {
+    height: 5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    width: 60%;
+  }
+  .add-img {
+    padding: 0.5rem 1rem;
+    width: 100%;
+
+  }
+  .remove-img {
+    padding: 0.5rem 2rem;
+    width: 100%;
+
+  }
+  .bio-uppar {
+    display: flex;
+    flex-direction: row;
+  }
+  .bio-text {
+    width: 90%;
+    height: 5rem;
+    margin: 0 auto;
+    margin-top: 1rem;
+  }
+  .user-text {
+    margin-left: 0;
+    margin-bottom: 0.6rem;
+  }
+  .user-bio {
+    margin-left: 0;
+    margin-bottom: 0;
+  }
+  .add-btn {
+    width: 100%;
+    height: fit-content!important;
+    padding-bottom: 2rem;
+  }
+  .linkshop-btn {
+    width: 80%;
+  }
+  .add-link {
+    padding: 0.5rem 0.8rem;
+  }
+  .add-shop {
+    padding: 0.5rem 0.8rem;
+  }
+  .plus-add button {
+    padding: 0.5rem 5rem;  
+  }
+  .plus-add button span {
+    font-size: 0.8rem;
+  }
+  .custom-bg {
+    width: 100%;
+    height: 60vh;
+    margin-top: 2rem;
+  }
+  .custom-colourdiv {
+    width: 100%;
+    height: 50vh;
+  }
+  .user-bg {
+    height: 20vh;
+  }
+  .user-bg img {
+    width: 3rem;
+    height: 3rem;
+  }
+  .user-bg p {
+    font-size: 0.6rem;
+  }
+  .custom-colourdiv h4 {
+    margin-top: 0.5rem;
+    font-size: 0.7rem;
+  }
+  .three-color {
+    width: 6rem;
+    display: flex;
+    height: 3rem;
+    margin-left: 1rem;
+  }
+  .brown,
+  .gray,
+  .black {
+    width: 2rem;
+    height: 2rem;
+  }
+  .brown {
+    background-color: #342b26;
+  }
+  .gray {
+    background-color: gray;
+  }
+  .black {
+    background-color: black;
+  }
+  .save-btn button{
+    left: 0;
+  }
+}
+@media (min-width:321px) and (max-width:376px){
+  .user-right {
+    width: 90%;
+    height: 70vh;
+    overflow-y: auto;
+    margin: 0 auto;
+  }
+  .user-left {
+    display: none;
+  }
+  .user-heading {
+    font-family: "inter";
+  }
+  .bio {
+    width: 100%;
+    height: 40vh;
+    margin-top: 1rem;
+    gap: 1rem;
+  }
+  .img-show {
+    width: 3rem;
+    height: 3rem;
+  }
+  .img-show img {
+    width: 3rem;
+    height: 3rem;
+  }
+  .addremove {
+    height: 5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    width: 70%;
+  }
+  .add-img {
+    padding: 0.5rem 1rem;
+    width: 100%;
+
+  }
+  .remove-img {
+    padding: 0.5rem 2rem;
+    width: 100%;
+
+  }
+  .bio-uppar {
+    display: flex;
+    flex-direction: row;
+  }
+  .bio-text {
+    width: 90%;
+    height: 5rem;
+    margin: 0 auto;
+    margin-top: 1rem;
+  }
+  .user-text {
+    margin-left: 0;
+    margin-bottom: 0.6rem;
+  }
+  .user-bio {
+    margin-left: 0;
+    margin-bottom: 0;
+  }
+  .add-btn {
+    width: 100%;
+    height: fit-content!important;
+    padding-bottom: 2rem;
+  }
+  .linkshop-btn {
+    width: 80%;
+  }
+  .add-link {
+    padding: 0.5rem 0.8rem;
+  }
+  .add-shop {
+    padding: 0.5rem 0.8rem;
+  }
+  .plus-add button {
+    padding: 0.5rem 5rem;
+  }
+  .plus-add button span {
+    font-size: 0.8rem;
+  }
+  .custom-bg {
+    width: 100%;
+    height: 60vh;
+    margin-top: 2rem;
+  }
+  .custom-colourdiv {
+    width: 100%;
+    height: 50vh;
+  }
+  .user-bg {
+    height: 20vh;
+  }
+  .user-bg img {
+    width: 3rem;
+    height: 3rem;
+  }
+  .user-bg p {
+    font-size: 0.6rem;
+  }
+  .custom-colourdiv h4 {
+    margin-top: 0.5rem;
+    font-size: 0.7rem;
+  }
+  .three-color {
+    width: 6rem;
+    display: flex;
+    height: 3rem;
+    margin-left: 1rem;
+  }
+  .brown,
+  .gray,
+  .black {
+    width: 2rem;
+    height: 2rem;
+  }
+  .save-btn button{
+    left: 0;
+  }
+}
+@media (min-width:376px) and (max-width:426px){
+  .user-right {
+    width: 90%;
+    height: 70vh;
+    overflow-y: auto;
+    margin: 0 auto;
+  }
+  .user-left {
+    display: none;
+  }
+  .user-heading {
+    font-family: "inter";
+  }
+  .bio {
+    width: 100%;
+    height: 40vh;
+    margin-top: 1rem;
+    gap: 1rem;
+  }
+  .img-show {
+    width: 3rem;
+    height: 3rem;
+  }
+  .img-show img {
+    width: 3rem;
+    height: 3rem;
+  }
+  .addremove {
+    height: 5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    width: 80%;
+  }
+  .add-img {
+    padding: 0.5rem 1rem;
+    width: 100%;
+
+  }
+  .remove-img {
+    padding: 0.5rem 2rem;
+    width: 100%;
+
+  }
+  .bio-uppar {
+    display: flex;
+    flex-direction: row;
+  }
+  .bio-text {
+    width: 90%;
+    height: 5rem;
+    margin: 0 auto;
+    margin-top: 1rem;
+  }
+  .user-text {
+    margin-left: 0;
+    margin-bottom: 0.6rem;
+  }
+  .user-bio {
+    margin-left: 0;
+    margin-bottom: 0;
+  }
+  .add-btn {
+    width: 100%;
+    height: 20vh;
+  }
+  .linkshop-btn {
+    width: 80%;
+  }
+  .add-link {
+    padding: 0.5rem 0.8rem;
+  }
+  .add-shop {
+    padding: 0.5rem 0.8rem;
+  }
+  .plus-add button {
+    padding: 0.5rem 7rem;
+  }
+  .plus-add button span {
+    font-size: 0.8rem;
+  }
+  .custom-bg {
+    width: 100%;
+    height: 60vh;
+    margin-top: 2rem;
+  }
+  .custom-colourdiv {
+    width: 100%;
+    height: 50vh;
+  }
+  .user-bg {
+    height: 20vh;
+  }
+  .user-bg img {
+    width: 3rem;
+    height: 3rem;
+  }
+  .user-bg p {
+    font-size: 0.6rem;
+  }
+  .custom-colourdiv h4 {
+    margin-top: 0.5rem;
+    font-size: 0.7rem;
+  }
+  .three-color {
+    width: 6rem;
+    display: flex;
+    height: 3rem;
+    margin-left: 1rem;
+  }
+  .brown,
+  .gray,
+  .black {
+    width: 2rem;
+    height: 2rem;
+  }
+  .brown {
+    background-color: #342b26;
+  }
+  .gray {
+    background-color: gray;
+  }
+  .black {
+    background-color: black;
+  }
+  .save-btn button{
+    left: 0;
+  }
+}
+@media (min-width:426px) and (max-width:769px){
+  .user-right {
+    width: 90%;
+    height: 70vh;
+    overflow-y: auto;
+    margin: 0 auto;
+  }
+  .user-left {
+    display: none;
+  }
+  .user-heading {
+    font-family: "inter";
+  }
+  .bio {
+    width: 100%;
+    height: 40vh;
+    margin-top: 1rem;
+    gap: 1rem;
+  }
+  .img-show {
+    width: 3rem;
+    height: 3rem;
+  }
+  .img-show img {
+    width: 3rem;
+    height: 3rem;
+  }
+  .addremove {
+    height: 5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    width: 80%;
+  }
+  .add-img {
+    padding: 0.5rem 1rem;
+    width: 100%;
+
+  }
+  .remove-img {
+    padding: 0.5rem 2rem;
+    width: 100%;
+
+  }
+  .bio-uppar {
+    display: flex;
+    flex-direction: row;
+  }
+  .bio-text {
+    width: 90%;
+    height: 5rem;
+    margin: 0 auto;
+    margin-top: 1rem;
+  }
+  .user-text {
+    margin-left: 0;
+    margin-bottom: 0.6rem;
+  }
+  .user-bio {
+    margin-left: 0;
+    margin-bottom: 0;
+  }
+  .add-btn {
+    width: 100%;
+    height: fit-content!important;
+    padding-bottom: 2rem;
+  }
+  .linkshop-btn {
+    width: 80%;
+  }
+  .add-link {
+    padding: 0.5rem 0.8rem;
+  }
+  .add-shop {
+    padding: 0.5rem 0.8rem;
+  }
+  .plus-add button {
+    padding: 0.5rem 7rem;
+  }
+  .plus-add button span {
+    font-size: 0.8rem;
+  }
+  .custom-bg {
+    width: 100%;
+    height: 60vh;
+    margin-top: 2rem;
+  }
+  .custom-colourdiv {
+    width: 100%;
+    height: 50vh;
+  }
+  .user-bg {
+    height: 20vh;
+  }
+  .user-bg img {
+    width: 3rem;
+    height: 3rem;
+  }
+  .user-bg p {
+    font-size: 0.6rem;
+  }
+  .custom-colourdiv h4 {
+    margin-top: 0.5rem;
+    font-size: 0.7rem;
+  }
+  .three-color {
+    width: 6rem;
+    display: flex;
+    height: 3rem;
+    margin-left: 1rem;
+  }
+  .brown,
+  .gray,
+  .black {
+    width: 2rem;
+    height: 2rem;
+  }
+  .save-btn button{
+    left: 0;
+  }
+  .hexa-colour{
+    width: 20%;
+    height: 5vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.4rem;
+  }
+}
+
+@media (min-width:769px) and (max-width:1025px){
+  .user-left {
+    width: 50%;
+    height: 80vh;
+  }
+  
+  .user-right {
+    width: 50%;
+    height: 75vh;
+  }
+  .bio {
+    width: 90%;
+    height: 40vh;
+  }
+  .img-show {
+    width: 4rem;
+    height: 4rem;
+  }
+  .img-show img {
+    width: 4rem;
+    height: 4rem;
+  }
+  .addremove {
+    height: 15vh;
+    margin-right:0;
+    width: 70%;
+    margin-left: 1rem;
+  }
+  .add-img {
+    width: 100%;
+    padding: 0.6rem 1rem;
+  }
+  .remove-img {
+    width: 100%;
+    padding: 0.5rem 1rem;
+  }
+  .bio-uppar {
+    display: flex;
+    flex-direction: row;
+  }
+  .bio-text {
+    width: 90%;
+    height: 20vh;
+    margin: 0 auto;
+  }
+  .user-text {
+    margin-left: 1rem;
+  }
+  
+  .user-bio {
+    margin-left: 1rem;
+  }
+  .user-bio textarea {
+    height: 8vh;
+  }
+  .add-btn {
+    width: 90%;
+    height: fit-content!important;
+    padding-bottom: 2rem;
+  }
+  
+  .plus-add button {
+    padding: 0.2rem 1rem;
+  }
+  .custom-colourdiv {
+    width: 90%;
+  }
+  .user-bg img {
+    width: 3rem;
+    height: 3rem;
+  }
+  .custom-colourdiv h4 {
+    font-size: 0.8rem;
+  }
+  .three-color {
+    width: 40%;
+  }
+  
+  .save-btn {
+    width: 90%;
+  }
+  .hexa-colour{
+    width: 40%;
+  }
+}
+
+
+@media (min-width:1025px) and (max-width:1441px){
+  .user-left {
+    width: 40%;
+    height: 80vh;
+  }
+  
+  .user-right {
+    width: 60%;
+    height: 75vh;
+  }
+  .bio {
+    width: 90%;
+    height: 40vh;
+  }
+  .img-show {
+    width: 4rem;
+    height: 4rem;
+  }
+  .img-show img {
+    width: 4rem;
+    height: 4rem;
+  }
+  .addremove {
+    height: 15vh;
+    margin-right:0;
+    width: 70%;
+    margin-left: 1rem;
+  }
+  .add-img {
+    width: 100%;
+    padding: 0.6rem 1rem;
+  }
+  .remove-img {
+    width: 100%;
+    padding: 0.5rem 1rem;
+  }
+  .bio-uppar {
+    display: flex;
+    flex-direction: row;
+  }
+  .bio-text {
+    width: 90%;
+    height: 20vh;
+    margin: 0 auto;
+  }
+  .user-text {
+    margin-left: 1rem;
+  }
+  
+  .user-bio {
+    margin-left: 1rem;
+  }
+  .user-bio textarea {
+    height: 8vh;
+  }
+  .add-btn {
+    width: 90%;
+    height: fit-content!important;
+    padding-bottom: 2rem;
+  }
+  
+  .plus-add button {
+    padding: 0.2rem 1rem;
+  }
+  .custom-colourdiv {
+    width: 90%;
+  }
+  .user-bg img {
+    width: 3rem;
+    height: 3rem;
+  }
+  .custom-colourdiv h4 {
+    font-size: 0.8rem;
+  }
+  .three-color {
+    width: 40%;
+  }
+  
+  .save-btn {
+    width: 90%;
+  }
+  .hexa-colour{
+    width: 40%;
+  }
+}

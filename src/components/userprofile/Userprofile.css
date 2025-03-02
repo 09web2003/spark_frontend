@@ -1,0 +1,289 @@
+html, body {
+    background-color: white;
+}
+.userprofile-main{
+    width: 100%;
+    min-height: 100vh;
+    background-color: white;
+}
+
+.userprofile-icon{
+    width: 90%;
+    height: 10vh;
+    margin: 0 auto;
+    padding-top: 1rem;
+    display: flex;
+    gap: 2rem;
+    margin: 0 auto;
+}
+.userprofile-icon h3{
+    font-size: 1.5rem;
+    font-family: "poppins";
+}
+.banner{
+    width: 90%;
+    height: 30vh;
+    background-color: aquamarine;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    border-radius: 20px;
+    margin: 0 auto;
+}
+.banner-img{
+    width: 5rem;
+    height: 5rem;
+    border-radius: 50%;
+}
+.banner-img img{
+    width: 5rem;
+    height: 5rem;
+    border-radius: 50%;
+}
+.banner-user{
+    width: 10%;
+    height: 2rem;
+}
+.banner-user h4{
+    font-size: 1rem;
+    font-family: "poppins";
+}
+.user-banner-links{
+    width: 90%;
+    height: 50vh;
+    margin: 0 auto;
+}
+.show-links{
+    cursor: pointer;
+    width: 80%;
+    height: fit-content;
+    border-radius: 10px;
+    margin: 0 auto;
+    padding: 1rem;
+    background-color: rgb(221, 214, 214);
+    margin-top: 1rem;
+}
+.show-links h3{
+    font-family: "poppins";
+    font-size: 1rem;
+    text-align: center;
+    font-weight: 500;
+    word-spacing: 0.2rem;
+
+}
+.banner-footer{
+    position: relative;
+    width: 80%;
+    height: 3vh;
+    margin: 0 auto;
+}
+.banner-abs{
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    flex-direction: column;
+    
+}
+.banner-button{
+    width: 70%;
+    margin: 0 auto;
+}
+.banner-button button{
+    cursor: pointer;
+    width: 100%;
+    height: fit-content;
+    padding: 0.5rem;
+    background-color: rgb(79, 190, 79);
+    color: white;
+    border-radius: 10px;
+    border: none;
+}
+.banner-footer{
+    display: flex;
+    width: 20%;
+   gap: 1rem;
+   justify-content: center;
+   align-items: center;
+}
+
+@media (max-width:321px){
+    .userprofile-icon h3{
+    font-size: 1rem;
+    font-family: "poppins";
+    }
+    .banner{
+        width: 90%;
+        height: 30vh;
+        background-color: aquamarine;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 1rem;
+        border-radius: 20px;
+        margin: 0 auto;
+    }
+    .banner-user{
+        width: 40%;
+        height: 2rem;
+    }
+    .banner-footer{
+        position: relative;
+        width: 70%;
+        height: 3vh;
+        margin: 0 auto;
+    }
+    .banner-button{
+        width: 100%;
+        margin: 0 auto;
+    }
+    .banner-button button{
+        cursor: pointer;
+        width: 100%;
+        height: fit-content;
+        padding: 0.5rem;
+        background-color: rgb(79, 190, 79);
+        color: white;
+        border-radius: 10px;
+        border: none;
+        padding: 0.5rem 1rem;
+    }
+}
+
+@media (min-width:321px) and (max-width:376px){
+    .userprofile-icon h3{
+    font-size: 1rem;
+    font-family: "poppins";
+    }
+    .banner{
+        width: 90%;
+        height: 30vh;
+        background-color: aquamarine;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 1rem;
+        border-radius: 20px;
+        margin: 0 auto;
+    }
+    .banner-user{
+        width: 40%;
+        height: 2rem;
+    }
+    .banner-footer{
+        position: relative;
+        width: 70%;
+        height: 3vh;
+        margin: 0 auto;
+    }
+    .banner-button{
+        width: 100%;
+        margin: 0 auto;
+    }
+    .banner-button button{
+        cursor: pointer;
+        width: 100%;
+        height: fit-content;
+        padding: 0.5rem;
+        background-color: rgb(79, 190, 79);
+        color: white;
+        border-radius: 10px;
+        border: none;
+        padding: 0.5rem 1rem;
+    }
+}
+
+@media (min-width:376px) and (max-width:426px){
+    .userprofile-icon h3{
+    font-size: 1rem;
+    font-family: "poppins";
+    }
+    .banner{
+        width: 90%;
+        height: 30vh;
+        background-color: aquamarine;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 1rem;
+        border-radius: 20px;
+        margin: 0 auto;
+    }
+    .banner-user{
+        width: 30%;
+        height: 2rem;
+    }
+    .banner-footer{
+        position: relative;
+        width: 70%;
+        height: 3vh;
+        margin: 0 auto;
+    }
+    .banner-button{
+        width: 100%;
+        margin: 0 auto;
+    }
+    .banner-button button{
+        cursor: pointer;
+        width: 100%;
+        height: fit-content;
+        padding: 0.5rem;
+        background-color: rgb(79, 190, 79);
+        color: white;
+        border-radius: 10px;
+        border: none;
+        padding: 0.5rem 1rem;
+    }
+}
+
+@media (min-width:426px) and (max-width:769px){
+    .userprofile-icon h3{
+    font-size: 1rem;
+    font-family: "poppins";
+    }
+    .banner{
+        width: 90%;
+        height: 30vh;
+        background-color: aquamarine;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 1rem;
+        border-radius: 20px;
+        margin: 0 auto;
+    }
+    .banner-user{
+        width: 20%;
+        height: 2rem;
+    }
+    .banner-footer{
+        position: relative;
+        width: 70%;
+        height: 3vh;
+        margin: 0 auto;
+    }
+    .banner-button{
+        width: 100%;
+        margin: 0 auto;
+    }
+    .banner-button button{
+        cursor: pointer;
+        width: 100%;
+        height: fit-content;
+        padding: 0.5rem;
+        background-color: rgb(79, 190, 79);
+        color: white;
+        border-radius: 10px;
+        border: none;
+        padding: 0.5rem 1rem;
+    }
+}

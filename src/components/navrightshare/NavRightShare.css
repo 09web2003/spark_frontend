@@ -1,0 +1,22 @@
+.link-nav {
+    width: 90%;
+    height: 10vh;
+    display: flex;
+    margin: 0 auto;
+    align-items: center;
+    justify-content: space-between;
+    font-family: "poppins";
+  }
+  .link-para1 span {
+    font-weight: 800;
+  }
+  .link-para1 {
+    font-size: 1rem;
+    font-weight: 500;
+  }
+  .link-para2 {
+    color: #8b7d7d;
+    font-size: 0.7rem;
+    font-family: inherit;
+  }
+ 

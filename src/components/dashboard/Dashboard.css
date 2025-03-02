@@ -1,0 +1,126 @@
+.dashboard-main{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+}
+.dashboard-left{
+    width: 15%;
+    height: 100vh;
+    background-color: white;
+    overflow: auto;
+}
+.dashboard-right{
+    width: 85%;
+    height: 100vh;
+    background-color: rgb(247, 242, 242);
+    overflow-y: auto;
+}
+.dashboard-right::-webkit-scrollbar {
+    width: 10px;
+  }
+  
+  .dashboard-right::-webkit-scrollbar-track {
+    background-color: transparent;
+  }
+  
+  .dashboard-right::-webkit-scrollbar-thumb {
+    background-color: lightgray;
+    transition: 0.3s;
+    border-radius: 10px;
+  }
+  
+  .dashboard-right::-webkit-scrollbar-thumb:hover {
+    background-color: rgb(109, 103, 103);
+    cursor: pointer;
+  }
+  @media(max-width:321px){
+    .dashboard-main{
+      display: flex;
+      flex-direction: column-reverse;
+  }
+  .dashboard-left{
+      width: 100%;
+      height: 10vh;
+      background-color: white;
+      overflow-x: hidden;
+      margin-bottom: 2rem;
+      border: 1px solid gray;
+  }
+  .dashboard-right{
+      width: 100%;
+      height: 100vh;
+      background-color: rgb(247, 242, 242);
+      overflow-x: hidden;
+  }
+  }
+  @media(min-width:321px) and (max-width:376px){
+    .dashboard-main{
+      display: flex;
+      flex-direction: column-reverse;
+  }
+  .dashboard-left{
+      width: 100%;
+      height: 10vh;
+      background-color: white;
+      overflow-x: hidden;
+      margin-bottom: 2rem;
+      border: 1px solid gray;
+  }
+  .dashboard-right{
+      width: 100%;
+      height: 100vh;
+      background-color: rgb(247, 242, 242);
+      overflow-x: hidden;
+  }
+  }
+  @media (min-width:376px) and (max-width:426px){
+    .dashboard-main{
+      display: flex;
+      flex-direction: column-reverse;
+  }
+  .dashboard-left{
+      width: 100%;
+      height: 10vh;
+      background-color: white;
+      overflow-x: hidden;
+      margin-bottom: 2rem;
+      border: 1px solid gray;
+  }
+  .dashboard-right{
+      width: 100%;
+      height: 100vh;
+      background-color: rgb(247, 242, 242);
+      overflow-x: hidden;
+  }
+  }
+
+
+  @media (min-width:426px) and (max-width:769px){
+    .dashboard-main{
+      display: flex;
+      flex-direction: column-reverse;
+  }
+  .dashboard-left{
+      width: 100%;
+      height: 10vh;
+      background-color: white;
+      overflow-x: hidden;
+      margin-bottom: 2rem;
+      border: 1px solid gray;
+  }
+  .dashboard-right{
+      width: 100%;
+      height: 100vh;
+      background-color: rgb(247, 242, 242);
+      overflow-x: hidden;
+  }
+  }
+
+  @media (min-width:769px) and (max-width:1025px){
+  .dashboard-left{
+      width: 20%;
+  }
+  .dashboard-right{
+      width: 80%;
+  }
+  }

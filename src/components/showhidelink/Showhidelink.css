@@ -1,0 +1,34 @@
+.showhidebtn-main{
+    width: 100%;
+    height: fit-content;
+    padding: 1rem;
+}
+.showhidebtn{
+    width:100%;
+    height: fit-content;
+    background-color: #F3F3F1;
+    border-radius: 20px;
+    padding: 1rem;
+}
+.showhidebtn h3{
+    font-size: 0.8rem;
+    color: #575757;
+    font-family: "poppins";
+}
+.link-addbtn{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.link-addbtn p{
+    font-size: 0.6rem;
+    font-family: "poppins";
+    color: #767676;
+}
+.fa-toggle-off{
+    position: absolute;
+    right: 20rem;
+    transform: translateY(-50%);
+    cursor: pointer;
+    color: #888;
+}

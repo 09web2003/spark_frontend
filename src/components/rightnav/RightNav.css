@@ -1,0 +1,52 @@
+.link-nav {
+    width: 90%;
+    height: 10vh;
+    display: flex;
+    margin: 0 auto;
+    align-items: center;
+    justify-content: space-between;
+    font-family: "poppins";
+  }
+  .share-btn button {
+    padding: 0.5rem 0.5rem;
+    border-radius: 20px;
+    background-color: white;
+    border: none;
+    color: black;
+    margin: 0.5rem;
+    font-family: inherit;
+    font-size: 0.6rem;
+    font-weight: 700;
+  }
+  .link-para1 span {
+    font-weight: 800;
+  }
+  .link-para1 {
+    font-size: 1rem;
+    font-weight: 500;
+  }
+  .link-para2 {
+    color: #8b7d7d;
+    font-size: 0.7rem;
+    font-family: inherit;
+  }
+  @media (max-width:321px){
+    .link-nav {
+      display: none;
+    }
+  }
+  @media (min-width:321px) and (max-width:376px){
+    .link-nav {
+      display: none;
+    }
+  }
+  @media(min-width:376px) and (max-width:426px){
+    .link-nav {
+      display: none;
+    }
+  }
+  @media(min-width:426px) and (max-width:769px){
+    .link-nav {
+      display: none;
+    }
+  }

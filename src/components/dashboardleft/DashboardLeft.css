@@ -1,0 +1,585 @@
+.dash-spark {
+  display: flex;
+  width: 100%;
+  height: 15vh;
+  gap: 0.8rem;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+.dash-spark p {
+  font-size: 1.5rem;
+}
+.firenav {
+  color: #28a263;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+.dash-spark h3 {
+  font-size: 1.8rem;
+  font-family: "poppins";
+  font-weight: 600;
+}
+.dash-links {
+  display: flex;
+  width: 100%;
+  height: 30vh;
+  align-items: center;
+  flex-direction: column;
+  cursor: pointer;
+}
+.dash-link1,
+.dash-link2,
+.dash-link3,
+.dash-link4 {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 10vh;
+  color: #9c9292;
+  font-size: 0.8rem;
+  justify-content: center;
+  gap: 0.5rem;
+}
+.dash-link1 p,
+.dash-link2 p,
+.dash-link3 p,
+.dash-link4 p,
+.dash-links p {
+  color: inherit;
+  font-family: "poppins";
+  font-size: inherit;
+}
+.dash-link1:hover {
+  color: #28a263;
+  background-color: rgb(247, 242, 242);
+  font-size: 1rem;
+  font-weight: 600;
+}
+.dash-link2:hover {
+  color: #28a263;
+  background-color: rgb(247, 242, 242);
+  font-size: 1rem;
+  font-weight: 600;
+}
+.dash-link3:hover {
+  color: #28a263;
+  background-color: rgb(247, 242, 242);
+  font-size: 1rem;
+  font-weight: 600;
+}
+.dash-link4:hover {
+  color: #28a263;
+  background-color: rgb(247, 242, 242);
+  font-size: 1rem;
+  font-weight: 600;
+}
+.dash-link5:hover {
+  color: #28a263;
+  background-color: rgb(247, 242, 242);
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.dash-links .active {
+  color: #28a263;
+  background-color: rgb(247, 242, 242);
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.left-username {
+  width: 90%;
+  height: 6vh;
+  border-radius: 30px;
+  background-color: white;
+  display: flex;
+  justify-content: space-around;
+  margin-left: 0.7rem;
+  border: 1px solid black;
+  position: absolute;
+  bottom: 0;
+  cursor: pointer;
+}
+.bottom-user {
+  position: relative;
+  height: 50vh;
+}
+.left-username img {
+  width: 2rem;
+  height: 2rem;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-top: 0.3rem;
+}
+.left-username p {
+  font-size: 1rem;
+  margin-top: 0.6rem;
+}
+@media (max-width: 321px) {
+  .dash-spark {
+    display: flex;
+    width: 100%;
+    height: 15vh;
+    gap: 0.8rem;
+    align-items: center;
+    justify-content: center;
+    display: none;
+  }
+  .dash-spark p {
+    font-size: 1.5rem;
+    display: none;
+  }
+  .dash-spark h3 {
+    font-size: 1.8rem;
+    font-family: "poppins";
+    font-weight: 600;
+    display: none;
+  }
+  .dash-links {
+    display: flex;
+    width: 100%;
+    height: 3.4rem;
+    align-items: center;
+    cursor: pointer;
+    justify-content: space-around;
+    flex-direction: row;
+    gap: 0;
+  }
+  .dash-link1,
+  .dash-link2,
+  .dash-link3,
+  .dash-link4 {
+    display: flex;
+    align-items: center;
+    width: 2rem;
+    height: 3rem;
+    color: #9c9292;
+    font-size: 0.8rem;
+    justify-content: center;
+    gap: 0.5rem;
+    flex-direction: column;
+  }
+  .dash-link1 p,
+  .dash-link2 p,
+  .dash-link3 p,
+  .dash-link4 p,
+  .dash-links p {
+    color: inherit;
+    font-family: "poppins";
+    font-size: inherit;
+  }
+  .dash-link1:hover {
+    color: #28a263;
+    background-color: rgb(247, 242, 242);
+    font-size: 1rem;
+    font-weight: 600;
+  }
+  .dash-link2:hover {
+    color: #28a263;
+    background-color: rgb(247, 242, 242);
+    font-size: 1rem;
+    font-weight: 600;
+  }
+  .dash-link3:hover {
+    color: #28a263;
+    background-color: rgb(247, 242, 242);
+    font-size: 1rem;
+    font-weight: 600;
+  }
+  .dash-link4:hover {
+    color: #28a263;
+    background-color: rgb(247, 242, 242);
+    font-size: 1rem;
+    font-weight: 600;
+  }
+  .dash-link5:hover {
+    color: #28a263;
+    background-color: rgb(247, 242, 242);
+    font-size: 1rem;
+    font-weight: 600;
+  }
+  .left-username {
+    width: 90%;
+    height: 6vh;
+    border-radius: 30px;
+    background-color: white;
+    display: flex;
+    justify-content: space-around;
+    margin-left: 0.7rem;
+    border: 1px solid black;
+    position: absolute;
+    bottom: 0;
+    cursor: pointer;
+    display: none;
+  }
+  .bottom-user {
+    position: relative;
+    height: 50vh;
+    display: none;
+  }
+  .left-username img {
+    width: 2rem;
+    height: 2rem;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-top: 0.3rem;
+    display: none;
+  }
+  .left-username p {
+    font-size: 1rem;
+    margin-top: 0.6rem;
+    display: none;
+  }
+}
+@media (min-width: 321px) and (max-width: 376px) {
+  .dash-spark {
+    display: flex;
+    width: 100%;
+    height: 15vh;
+    gap: 0.8rem;
+    align-items: center;
+    justify-content: center;
+    display: none;
+  }
+  .dash-spark p {
+    font-size: 1.5rem;
+    display: none;
+  }
+  .dash-spark h3 {
+    font-size: 1.8rem;
+    font-family: "poppins";
+    font-weight: 600;
+    display: none;
+  }
+  .dash-links {
+    display: flex;
+    width: 100%;
+    height: 3.4rem;
+    align-items: center;
+    cursor: pointer;
+    justify-content: space-around;
+    flex-direction: row;
+    gap: 0;
+  }
+  .dash-link1,
+  .dash-link2,
+  .dash-link3,
+  .dash-link4 {
+    display: flex;
+    align-items: center;
+    width: 2rem;
+    height: 3rem;
+    color: #9c9292;
+    font-size: 0.8rem;
+    justify-content: center;
+    gap: 0.5rem;
+    flex-direction: column;
+  }
+  .dash-link1 p,
+  .dash-link2 p,
+  .dash-link3 p,
+  .dash-link4 p,
+  .dash-links p {
+    color: inherit;
+    font-family: "poppins";
+    font-size: inherit;
+  }
+  .dash-link1:hover {
+    color: #28a263;
+    background-color: rgb(247, 242, 242);
+    font-size: 1rem;
+    font-weight: 600;
+  }
+  .dash-link2:hover {
+    color: #28a263;
+    background-color: rgb(247, 242, 242);
+    font-size: 1rem;
+    font-weight: 600;
+  }
+  .dash-link3:hover {
+    color: #28a263;
+    background-color: rgb(247, 242, 242);
+    font-size: 1rem;
+    font-weight: 600;
+  }
+  .dash-link4:hover {
+    color: #28a263;
+    background-color: rgb(247, 242, 242);
+    font-size: 1rem;
+    font-weight: 600;
+  }
+  .dash-link5:hover {
+    color: #28a263;
+    background-color: rgb(247, 242, 242);
+    font-size: 1rem;
+    font-weight: 600;
+  }
+  .left-username {
+    width: 90%;
+    height: 6vh;
+    border-radius: 30px;
+    background-color: white;
+    display: flex;
+    justify-content: space-around;
+    margin-left: 0.7rem;
+    border: 1px solid black;
+    position: absolute;
+    bottom: 0;
+    cursor: pointer;
+    display: none;
+  }
+  .bottom-user {
+    position: relative;
+    height: 50vh;
+    display: none;
+  }
+  .left-username img {
+    width: 2rem;
+    height: 2rem;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-top: 0.3rem;
+    display: none;
+  }
+  .left-username p {
+    font-size: 1rem;
+    margin-top: 0.6rem;
+    display: none;
+  }
+}
+@media (min-width: 376px) and (max-width: 426px) {
+  .dash-spark {
+    display: flex;
+    width: 100%;
+    height: 15vh;
+    gap: 0.8rem;
+    align-items: center;
+    justify-content: center;
+    display: none;
+  }
+  .dash-spark p {
+    font-size: 1.5rem;
+    display: none;
+  }
+  .dash-spark h3 {
+    font-size: 1.8rem;
+    font-family: "poppins";
+    font-weight: 600;
+    display: none;
+  }
+  .dash-links {
+    display: flex;
+    width: 100%;
+    height: 3.4rem;
+    align-items: center;
+    cursor: pointer;
+    justify-content: space-around;
+    flex-direction: row;
+    gap: 0;
+  }
+  .dash-link1,
+  .dash-link2,
+  .dash-link3,
+  .dash-link4 {
+    display: flex;
+    align-items: center;
+    width: 2rem;
+    height: 3rem;
+    color: #9c9292;
+    font-size: 0.8rem;
+    justify-content: center;
+    gap: 0.5rem;
+    flex-direction: column;
+  }
+  .dash-link1 p,
+  .dash-link2 p,
+  .dash-link3 p,
+  .dash-link4 p,
+  .dash-links p {
+    color: inherit;
+    font-family: "poppins";
+    font-size: inherit;
+  }
+  .dash-link1:hover {
+    color: #28a263;
+    background-color: rgb(247, 242, 242);
+    font-size: 1rem;
+    font-weight: 600;
+  }
+  .dash-link2:hover {
+    color: #28a263;
+    background-color: rgb(247, 242, 242);
+    font-size: 1rem;
+    font-weight: 600;
+  }
+  .dash-link3:hover {
+    color: #28a263;
+    background-color: rgb(247, 242, 242);
+    font-size: 1rem;
+    font-weight: 600;
+  }
+  .dash-link4:hover {
+    color: #28a263;
+    background-color: rgb(247, 242, 242);
+    font-size: 1rem;
+    font-weight: 600;
+  }
+  .dash-link5:hover {
+    color: #28a263;
+    background-color: rgb(247, 242, 242);
+    font-size: 1rem;
+    font-weight: 600;
+  }
+  .left-username {
+    width: 90%;
+    height: 6vh;
+    border-radius: 30px;
+    background-color: white;
+    display: flex;
+    justify-content: space-around;
+    margin-left: 0.7rem;
+    border: 1px solid black;
+    position: absolute;
+    bottom: 0;
+    cursor: pointer;
+    display: none;
+  }
+  .bottom-user {
+    position: relative;
+    height: 50vh;
+    display: none;
+  }
+  .left-username img {
+    width: 2rem;
+    height: 2rem;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-top: 0.3rem;
+    display: none;
+  }
+  .left-username p {
+    font-size: 1rem;
+    margin-top: 0.6rem;
+    display: none;
+  }
+}
+
+@media (min-width: 426px) and (max-width: 769px) {
+  .dash-spark {
+    display: flex;
+    width: 100%;
+    height: 15vh;
+    gap: 0.8rem;
+    align-items: center;
+    justify-content: center;
+    display: none;
+  }
+  .dash-spark p {
+    font-size: 1.5rem;
+    display: none;
+  }
+  .dash-spark h3 {
+    font-size: 1.8rem;
+    font-family: "poppins";
+    font-weight: 600;
+    display: none;
+  }
+  .dash-links {
+    display: flex;
+    width: 100%;
+    height: 3.4rem;
+    align-items: center;
+    cursor: pointer;
+    justify-content: space-around;
+    flex-direction: row;
+    gap: 0;
+  }
+  .dash-link1,
+  .dash-link2,
+  .dash-link3,
+  .dash-link4 {
+    display: flex;
+    align-items: center;
+    width: 2rem;
+    height: 3rem;
+    color: #9c9292;
+    font-size: 0.8rem;
+    justify-content: center;
+    gap: 0.5rem;
+    flex-direction: column;
+  }
+  .dash-link1 p,
+  .dash-link2 p,
+  .dash-link3 p,
+  .dash-link4 p,
+  .dash-links p {
+    color: inherit;
+    font-family: "poppins";
+    font-size: inherit;
+  }
+  .dash-link1:hover {
+    color: #28a263;
+    background-color: rgb(247, 242, 242);
+    font-size: 1rem;
+    font-weight: 600;
+  }
+  .dash-link2:hover {
+    color: #28a263;
+    background-color: rgb(247, 242, 242);
+    font-size: 1rem;
+    font-weight: 600;
+  }
+  .dash-link3:hover {
+    color: #28a263;
+    background-color: rgb(247, 242, 242);
+    font-size: 1rem;
+    font-weight: 600;
+  }
+  .dash-link4:hover {
+    color: #28a263;
+    background-color: rgb(247, 242, 242);
+    font-size: 1rem;
+    font-weight: 600;
+  }
+  .dash-link5:hover {
+    color: #28a263;
+    background-color: rgb(247, 242, 242);
+    font-size: 1rem;
+    font-weight: 600;
+  }
+  .left-username {
+    width: 90%;
+    height: 6vh;
+    border-radius: 30px;
+    background-color: white;
+    display: flex;
+    justify-content: space-around;
+    margin-left: 0.7rem;
+    border: 1px solid black;
+    position: absolute;
+    bottom: 0;
+    cursor: pointer;
+    display: none;
+  }
+  .bottom-user {
+    position: relative;
+    height: 50vh;
+    display: none;
+  }
+  .left-username img {
+    width: 2rem;
+    height: 2rem;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-top: 0.3rem;
+    display: none;
+  }
+  .left-username p {
+    font-size: 1rem;
+    margin-top: 0.6rem;
+    display: none;
+  }
+}
+
+

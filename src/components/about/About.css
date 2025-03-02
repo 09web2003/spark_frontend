@@ -1,0 +1,391 @@
+.main-about {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  overflow: hidden;
+}
+.main-left-about {
+  width: 60%;
+  height: 100vh;
+}
+.about-para {
+  margin-left: 17rem;
+  word-spacing: 0.001rem;
+  color: #969c8c;
+  margin-top: 0.8rem;
+  font-size: 0.9rem;
+}
+.about-logo {
+  display: flex;
+  width: 10rem;
+  margin-left: 3rem;
+  align-items: center;
+  margin-top: 3rem;
+  gap: 0.5rem;
+}
+.about-heading-logo {
+  font-size: 1.3rem;
+  font-weight: 600;
+  font-family: "Barlow", serif;
+}
+.heading-about {
+  text-align: center;
+  font-size: 2.2rem;
+  font-weight: 800;
+  font-family: "poppins";
+  margin-top: 2rem;
+}
+
+.form-centre-about {
+  width: 30rem;
+  height: 30rem;
+  margin: 0 auto;
+  margin-top: 2.5rem;
+}
+input {
+  display: block;
+  background-color: #eff0ec;
+  color: black;
+  margin-left: 2rem;
+  outline: none;
+  font-weight: 600;
+}
+
+.input-form-about {
+  width: 100%;
+  border-radius: 10px;
+  padding: 0.5rem 1rem;
+  border: none;
+  margin-bottom: 1rem;
+  margin-left: 2rem;
+}
+.option-data {
+  margin-left: 2.2rem;
+  height: 10rem;
+  margin-top: 2.5rem;
+}
+.category {
+  margin-left: 1rem;
+  font-size: 0.8rem;
+  font-weight: 900;
+}
+.cate-btn {
+  margin-top: 1rem;
+}
+.des-btn {
+  color: black;
+  padding: 0.5rem 1rem;
+  border-radius: 15px;
+  margin: 0.1rem;
+  margin-left: 0;
+  border: none;
+  background-color: #ffffff;
+}
+.des-btn:hover, .des-btn:focus {
+  background-color: #28a263;
+  color: white;
+}
+.submit-btn-about {
+  width: 30rem;
+  margin-top: 5rem;
+  padding: 0.6rem 0.5rem;
+  border-radius: 2rem;
+  background-color: #28a263;
+  border: none;
+  color: white;
+  font-weight: 600;
+  margin-left: 2rem;
+  cursor: pointer;
+}
+
+.main-right {
+  width: 40%;
+  height: 100vh;
+}
+.sign-img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+@media (max-width: 321px) {
+  .main-left-about {
+    width: 100%;
+  }
+  .about-para {
+    margin-left: 1rem;
+    margin-top: 0.5rem;
+    font-size: 0.6rem;
+  }
+  .about-logo {
+    width: 8rem;
+    margin-left: 1rem;
+    margin-top: 1rem;
+  }
+  .heading-about {
+    text-align: start;
+    font-size: 1.3rem;
+    margin-left: 1rem;
+  }
+
+  .form-centre-about {
+    width: 30rem;
+    height: 30rem;
+    margin: 0 auto;
+    margin-top: 2.5rem;
+  }
+  input {
+    margin-left: 1rem;
+  }
+
+  .input-form-about {
+    width: 55%;
+    height: 6vh;
+    padding: 0 1rem;
+  }
+  .option-data {
+    margin-left: 1rem;
+    height: 10rem;
+    margin-top: 2rem;
+    width: 65%;
+  }
+  .category {
+    font-size: 0.6rem;
+  }
+  .des-btn {
+    padding: 0.5rem 1rem;
+    border: 1px solid gray;
+  }
+  .submit-btn-about {
+    width: 18rem;
+    margin-top: 5rem;
+    padding: 0.6rem 0.5rem;
+    margin-left: 1rem;
+  }
+  .main-right {
+    display: none;
+  }
+  .sign-img {
+    display: none;
+  }
+}
+@media (min-width: 321px) and (max-width: 376px) {
+  .main-left-about {
+    width: 100%;
+  }
+  .about-para {
+    margin-left: 1rem;
+    margin-top: 0.5rem;
+    font-size: 0.6rem;
+  }
+  .about-logo {
+    width: 8rem;
+    margin-left: 1rem;
+    margin-top: 1rem;
+  }
+  .heading-about {
+    text-align: start;
+    font-size: 1.3rem;
+    margin-left: 1rem;
+  }
+
+  .form-centre-about {
+    width: 30rem;
+    height: 30rem;
+    margin: 0 auto;
+    margin-top: 2.5rem;
+  }
+  input {
+    margin-left: 1rem;
+  }
+
+  .input-form-about {
+    width: 65%;
+    height: 6vh;
+    padding: 0 1rem;
+  }
+  .option-data {
+    margin-left: 1rem;
+    height: 10rem;
+    margin-top: 1rem;
+    width: 75%;
+  }
+  .category {
+    font-size: 0.7rem;
+  }
+  .des-btn {
+    padding: 0.5rem 1rem;
+    border-radius: 15px;
+    margin: 0.1rem;
+    margin-left: 0;
+    border: none;
+    background-color:#FFFFFF;
+    cursor: pointer;
+}
+.des-btn:hover, .des-btn:focus {
+    background-color: #28A263;
+    color: white;
+}
+
+
+.submit-btn-about{
+    border: 1px solid gray;
+  }
+  .submit-btn-about {
+    width: 18rem;
+    margin-top: 5rem;
+    padding: 0.6rem 0.5rem;
+    margin-left: 1rem;
+  }
+  .main-right {
+    display: none;
+  }
+  .sign-img {
+    display: none;
+  }
+}
+@media (min-width: 376px) and (max-width: 426px) {
+  .main-left-about {
+    width: 100%;
+  }
+  .about-para {
+    margin-left: 1rem;
+    margin-top: 0.5rem;
+    font-size: 0.8rem;
+  }
+  .about-logo {
+    width: 8rem;
+    margin-left: 1rem;
+    margin-top: 1rem;
+  }
+  .heading-about {
+    text-align: start;
+    font-size: 1.5rem;
+    margin-left: 1rem;
+  }
+
+  .form-centre-about {
+    width: 30rem;
+    height: 30rem;
+    margin: 0 auto;
+    margin-top: 2.5rem;
+  }
+  input {
+    margin-left: 0;
+  }
+
+  .input-form-about {
+    width: 60%;
+    height: 6vh;
+    padding: 0 1rem;
+    margin-left: 1rem;
+  }
+  .option-data {
+    margin-left: 1rem;
+    height: 10rem;
+    margin-top: 1rem;
+    width: 75%;
+  }
+  .category {
+    font-size: 0.7rem;
+  }
+  .des-btn {
+    padding: 0.5rem 1rem;
+    border: 1px solid gray;
+    margin: 0.2rem;
+  }
+  .submit-btn-about {
+    width: 20rem;
+    margin-top: 7rem;
+    padding: 0.6rem 0.5rem;
+    margin-left: 1rem;
+  }
+  .main-right {
+    display: none;
+  }
+  .sign-img {
+    display: none;
+  }
+}
+
+@media (min-width: 426px) and (max-width: 769px) {
+  .main-left-about {
+    width: 100%;
+  }
+  .about-para {
+    margin-left: 3rem;
+    margin-top: 0.5rem;
+    font-size: 1rem;
+  }
+  .about-logo {
+    width: 8rem;
+    margin-left: 3rem;
+    margin-top: 1rem;
+  }
+  .heading-about {
+    text-align: start;
+    font-size: 1.8rem;
+    margin-left: 3rem;
+  }
+
+  .form-centre-about {
+    width: 50rem;
+    height: 30rem;
+    margin: 0 auto;
+    margin-top: 2.5rem;
+    margin-left: 2rem;
+  }
+  input {
+    margin-left: 0;
+  }
+
+  .input-form-about {
+    width: 50%;
+    height: 6vh;
+    padding: 0 1rem;
+    margin-left: 1rem;
+  }
+  .option-data {
+    margin-left: 1rem;
+    height: 10rem;
+    margin-top: 1rem;
+    width: 50%;
+  }
+  .category {
+    font-size: 0.7rem;
+  }
+  .des-btn {
+    padding: 0.5rem 1rem;
+    border: 1px solid gray;
+    margin: 0.3rem;
+  }
+  .submit-btn-about {
+    width: 22rem;
+    padding: 0.6rem 0.5rem;
+    margin-left: 2rem;
+    margin-top: 6rem;
+  }
+  .main-right {
+    display: none;
+  }
+  .sign-img {
+    display: none;
+  }
+}
+@media (min-width: 769px) and (max-width: 1025px) {
+  .about-para {
+    margin-left: 7rem;
+  }
+  .input-form-about {
+    width: 90%;
+  }
+  .submit-btn-about {
+    width: 25rem;
+  }
+}
+@media (min-width:1024px) and (max-width:1440px)
+{
+  .about-para {
+    margin-left: 14rem;
+  }
+}
