@@ -6,6 +6,8 @@ import { ToastContainer, toast,Bounce } from 'react-toastify';
 function Addlink() {
   const navigate = useNavigate();
   const params = useParams();
+
+  const [globalData, setGlobalData] = useState({});
   const [isActive, setisActive] = useState(false);
   const [title, settitle] = useState("");
   const [url, seturl] = useState("");
@@ -14,38 +16,27 @@ function Addlink() {
   const [socialLinks, setSocialLinks] = useState("");
   
   useEffect(() => {
+    if(JSON.parse(localStorage.getItem("user"))) {
+      setGlobalData(JSON.parse(localStorage.getItem("user")));
+    }
+
     if(JSON.parse(localStorage.getItem("user")).socialLinks) {
       setSocialLinks(JSON.parse(localStorage.getItem("user")).socialLinks);
     }
   }, [])
+
+  const reverseToggle = () => {
+    const element = document.getElementById("linkToggle");
+    if(linkToggle.classList.contains("fa-toggle-on")) {
+      linkToggle.classList.remove("fa-toggle-on");
+    }
+  }
   
   const handleLinkToggle = (event) => {
     const linkToggle = document.getElementById("linkToggle");
 
     if(linkToggle.classList.contains("fa-toggle-on")) {
-      toast.success('Save Link!', {
-        position: "top-center",
-        autoClose: 1000,
-        hideProgressBar: false,
-        closeOnClick: true,
-        pauseOnHover: false,
-        draggable: true,
-        progress: undefined,
-        theme: "colored",
-        transition: Bounce,
-        });
       linkToggle.classList.remove("fa-toggle-on");
-      toast.warn('REmove Link!', {
-        position: "top-center",
-        autoClose: 1000,
-        hideProgressBar: false,
-        closeOnClick: true,
-        pauseOnHover: false,
-        draggable: true,
-        progress: undefined,
-        theme: "colored",
-        transition: Bounce,
-        });
       setisActive(false);
       handleDelete(event);
     }
@@ -56,34 +47,37 @@ function Addlink() {
     }
   }
 
-  const handleDelete = async (event) => {
+  const handleDelete = (event) => {
     event.preventDefault();
 
     let updatedArray = [...socialLinks];
     updatedArray.pop();
 
-    let response = await fetch(`https://spark-backend-yyw3.onrender.com/api/v1/updateuser/${params.id}`, {
-      method: "PUT",
-      headers : {
-        "Content-type" : "application/json"
-      },
-      body: JSON.stringify({username : JSON.parse(localStorage.getItem("user")).username, socialLinks : updatedArray})
-    })
+    let tempData = globalData;
+    tempData.socialLinks = updatedArray;
+
+    localStorage.setItem("user", JSON.stringify(tempData));
+    setGlobalData(tempData);
+
+    toast.warn('Link Removed Successfully!', {
+      position: "top-center",
+      autoClose: 1000,
+      hideProgressBar: false,
+      closeOnClick: true,
+      pauseOnHover: false,
+      draggable: true,
+      progress: undefined,
+      theme: "colored",
+      transition: Bounce,
+    });
 
     setSocialLinks(updatedArray);
-
-    response = response.json().then((response) => {
-      localStorage.setItem("user", JSON.stringify(response.data))
-    })
   }
 
-  const handleUpdate = async (event) => {
+  const handleUpdate = (event) => {
     event.preventDefault();
 
-    let lastIndex = socialLinks[socialLinks.length - 1] + 1;
-
     let newItem = {
-      id: lastIndex,
       name: title,
       url: url,
       icon: icon, 
@@ -93,19 +87,25 @@ function Addlink() {
     let updatedArray = [...socialLinks];
     updatedArray.push(newItem);
 
-    let response = await fetch(`https://spark-backend-yyw3.onrender.com/api/v1/updateuser/${params.id}`, {
-      method: "PUT",
-      headers : {
-        "Content-type" : "application/json"
-      },
-      body: JSON.stringify({username : JSON.parse(localStorage.getItem("user")).username, socialLinks : updatedArray})
-    })
+    let tempData = globalData;
+    tempData.socialLinks = updatedArray;
+
+    localStorage.setItem("user", JSON.stringify(tempData));
+    setGlobalData(tempData);
+
+    toast.success('Link Saved Successfully!', {
+      position: "top-center",
+      autoClose: 1000,
+      hideProgressBar: false,
+      closeOnClick: true,
+      pauseOnHover: false,
+      draggable: true,
+      progress: undefined,
+      theme: "colored",
+      transition: Bounce,
+    });
 
     setSocialLinks(updatedArray);
-
-    response = response.json().then((response) => {
-      localStorage.setItem("user", JSON.stringify(response.data))
-    })
   }
 
   return (
@@ -156,6 +156,7 @@ function Addlink() {
                      setIconColor("rgb(188, 17, 46)")
                      seturl("https://www.instagram.com/")
                      settitle("Instagram")
+                     reverseToggle()
                   }}></i>
                   <div className="insta">Instagram</div>
                 </div>
@@ -165,6 +166,7 @@ function Addlink() {
                     setIconColor("blue")
                     seturl("https://www.facebook.com/")
                     settitle("facebook")
+                    reverseToggle()
                   }}></i>
                   <div className="facebook">Facebook</div>
                 </div>
@@ -174,6 +176,7 @@ function Addlink() {
                     setIconColor("red");
                     seturl("https://www.youtube.com/")
                     settitle("YouTube")
+                    reverseToggle()
                   }}></i>
                   <div className="youtube">Youtube</div>
                 </div>
@@ -183,6 +186,7 @@ function Addlink() {
                     setIconColor("black")
                     seturl("https://www.x.com/")
                     settitle("X")
+                    reverseToggle()
                 }}></i>
                   <div className="youtube">X</div>
                 </div>

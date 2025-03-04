@@ -18,11 +18,12 @@ function Linkpage() {
   const [error, setError] = useState("");
   const [isActive, setIsActive] = useState(true);
   const fileInputRef = useRef(null);
+  const [isSubmitting, setisSubmitting] = useState(false)
 
   const navigate = useNavigate();
 
   useEffect(() => {
-    if (localStorage.getItem("user")) {
+    if (localStorage.getItem("user")) {      
       setusername(JSON.parse(localStorage.getItem("user")).username);
       setimageFile(JSON.parse(localStorage.getItem("user")).profile);
       setBGcolor(JSON.parse(localStorage.getItem("user")).banner);
@@ -68,6 +69,7 @@ function Linkpage() {
 
   const handleUpdate = async (event) => {
     event.preventDefault();
+    setisSubmitting(true);
 
     const data = new FormData();
     data.append("file", imageFile);
@@ -108,8 +110,10 @@ function Linkpage() {
         transition: Bounce,
       });
       localStorage.setItem("user", JSON.stringify(response.data));
+      setisSubmitting(false);
       window.location.reload();
     }
+    setisSubmitting(false)
   };
 
   const previewImage = (event) => {
@@ -275,7 +279,7 @@ function Linkpage() {
                 </div>
               </div>
               <div className="save-btn">
-                <button onClick={handleUpdate}>Save</button>
+                <button onClick={handleUpdate}>{isSubmitting ? " Saving..." : "Save" }</button>
               </div>
             </div>
           </div>

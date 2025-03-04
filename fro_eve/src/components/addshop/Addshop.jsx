@@ -11,8 +11,15 @@ function Addshop() {
   const [shopLinks, setShopLinks] = useState([]);
   const [name, setname] = useState("");
   const [url, seturl] = useState("");
+  const [globalData, setGlobalData] = useState({})
 
   useEffect(() => {
+    let data = JSON.parse(localStorage.getItem("user"));
+
+    if(data) {
+      setGlobalData(data);
+    }
+
     if(JSON.parse(localStorage.getItem("user")).shopLinks) {
       setShopLinks(JSON.parse(localStorage.getItem("user")).shopLinks);
     }
@@ -22,29 +29,7 @@ function Addshop() {
     const shopToggle = document.getElementById("shopToggle");
 
     if(shopToggle.classList.contains("fa-toggle-on")) {
-      toast.success('Save Link!', {
-        position: "top-center",
-        autoClose: 1000,
-        hideProgressBar: false,
-        closeOnClick: true,
-        pauseOnHover: false,
-        draggable: true,
-        progress: undefined,
-        theme: "colored",
-        transition: Bounce,
-        });
       shopToggle.classList.remove("fa-toggle-on")
-      toast.warn('Remove Link!', {
-        position: "top-center",
-        autoClose: 1000,
-        hideProgressBar: false,
-        closeOnClick: true,
-        pauseOnHover: false,
-        draggable: true,
-        progress: undefined,
-        theme: "colored",
-        transition: Bounce,
-        });
       setIsActive(false);
       handleDelete(event);
     }
@@ -61,28 +46,29 @@ function Addshop() {
     let updatedArray = [...shopLinks];
     updatedArray.pop();
 
-    let response = await fetch(`https://spark-backend-yyw3.onrender.com/api/v1/updateuser/${params.id}`, {
-      method: "PUT",
-      headers : {
-        "Content-type" : "application/json"
-      },
-      body: JSON.stringify({username : JSON.parse(localStorage.getItem("user")).username, shopLinks : updatedArray})
-    })
+    let tempData = globalData ;
+    tempData.shopLinks = updatedArray;
+    localStorage.setItem("user", JSON.stringify(tempData));
+    setGlobalData(tempData);
 
     setShopLinks(updatedArray);
-
-    response = response.json().then((response) => {
-      localStorage.setItem("user", JSON.stringify(response.data))
-    })
+    toast.warn('Link Removed Successfully!', {
+      position: "top-center",
+      autoClose: 1000,
+      hideProgressBar: false,
+      closeOnClick: true,
+      pauseOnHover: false,
+      draggable: true,
+      progress: undefined,
+      theme: "colored",
+      transition: Bounce,
+    });
   }
 
   const handleUpdate = async (event) => {
     event.preventDefault();
 
-    let lastIndex = shopLinks[shopLinks.length - 1].id + 1;
-
     let newItem = {
-      id : lastIndex,
       name : name, 
       url : url
     }
@@ -90,19 +76,24 @@ function Addshop() {
     let updatedArray = [...shopLinks];
     updatedArray.push(newItem);
 
-    let response = await fetch(`https://spark-backend-yyw3.onrender.com/api/v1/updateuser/${params.id}`, {
-      method: "PUT",
-      headers : {
-        "Content-type" : "application/json"
-      },
-      body: JSON.stringify({username : JSON.parse(localStorage.getItem("user")).username, shopLinks : updatedArray})
-    })
+    let tempData = globalData;
+    tempData.shopLinks = updatedArray;
+    
+    localStorage.setItem("user", JSON.stringify(tempData))
+    setGlobalData(tempData);
 
     setShopLinks(updatedArray);
-
-    response = response.json().then((response) => {
-      localStorage.setItem("user", JSON.stringify(response.data))
-    })
+    toast.success('Save Link!', {
+      position: "top-center",
+      autoClose: 1000,
+      hideProgressBar: false,
+      closeOnClick: true,
+      pauseOnHover: false,
+      draggable: true,
+      progress: undefined,
+      theme: "colored",
+      transition: Bounce,
+    });
   }
 
   return (

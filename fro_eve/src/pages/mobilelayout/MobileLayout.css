@@ -86,6 +86,9 @@
   flex-direction: column;
   gap: 0.6rem;
 }
+.linkButton {
+  border-radius: 40px;
+}
 .link1,
 .link2 {
   width: 100%;
@@ -141,6 +144,7 @@
   margin: 2.5rem 1rem;
   width: 90%;
   background-color: transparent;
+  border-radius: 40px;
 }
 
 .user-mobile .stack > *{
@@ -155,7 +159,7 @@
 }
 
 .user-mobile .grid > div {
-  border-radius: 10px!important;
+  border-radius: 10px;
   height: 100%!important;
 }
 
@@ -179,7 +183,7 @@
 }
 
 .user-mobile .craousal > div {
-  border-radius: 10px!important;
+  border-radius: 10px;
   height: 100%!important;
 }
 
@@ -320,6 +324,7 @@
 
 .air-smoke {
   background: #2A3235;
+  color: white;
 }
 
 .air-smoke button, .air-smoke .linkButton {
@@ -329,6 +334,7 @@
 
 .air-black {
   background: black;
+  color: white;
 }
 
 .air-black button, .air-black .linkButton {

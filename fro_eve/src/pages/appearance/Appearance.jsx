@@ -33,32 +33,35 @@ function Appearance() {
       setbuttonFontColor(data.buttonFontColor);
       setFontType(data.font);
     }
-  }, [buttonDesign, layoutDesign, theme, buttonColor, buttonFontColor, fontColor, fontType])
+  }, [])
 
   const handleSubmit = async (event) => {
     event.preventDefault();
 
-    let response = await fetch(`https://spark-backend-yyw3.onrender.com/api/v1/updateuser/${JSON.parse(localStorage.getItem("user"))._id}`, {
-      method: "PUT",
-      headers : {
-        "Content-type" : "application/json"
-      }, 
-      body: JSON.stringify({username: JSON.parse(localStorage.getItem("user")).username, theme: theme, layoutType: layoutDesign, buttonType: buttonDesign, buttonColor: buttonColor, buttonFontColor: buttonFontColor, fontColor: fontColor, font: fontType})
-    })
+    let data = JSON.parse(localStorage.getItem("user"));
+    data.theme = theme;
+    data.layoutType = layoutDesign;
+    data.buttonColor = buttonColor;
+    data.buttonType = buttonDesign;
+    data.buttonFontColor = buttonFontColor;
+    data.fontColor = fontColor;
+    data.font = fontType;
 
-    response = await response.json();
-    toast.success('Save Successfully!', {
-      position: "top-center",
-      autoClose: 1000,
-      hideProgressBar: false,
-      closeOnClick: true,
-      pauseOnHover: false,
-      draggable: true,
-      progress: undefined,
-      theme: "colored",
-      transition: Bounce,
-      });
-    localStorage.setItem("user", JSON.stringify(response.data));
+    localStorage.setItem("user", JSON.stringify(data));
+
+    if(JSON.parse(localStorage.getItem("user")) != undefined) {
+      toast.success('Saved Successfully!', {
+        position: "top-center",
+        autoClose: 1000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: false,
+        draggable: true,
+        progress: undefined,
+        theme: "colored",
+        transition: Bounce,
+        });
+    }
   }
 
   return (

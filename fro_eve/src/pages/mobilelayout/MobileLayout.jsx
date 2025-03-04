@@ -75,13 +75,13 @@ function MobileLayout({ buttonColor, buttonFontColor, fontColor, fontType, butto
           <div className={`${layout ? layout : "user-links"}`}>
             <div
               className={`linkButton ${buttons ? buttons : "link1"}`}
-              style={{ width: "100%" , height: "fit-content", borderRadius: "40px", backgroundColor: buttonColor, color: (buttonFontColor ? buttonFontColor : null)}}
+              style={{ width: "100%" , height: "fit-content", backgroundColor: buttonColor, color: (buttonFontColor ? buttonFontColor : null)}}
             >
               <p style={{fontFamily: (fontType ? fontType : "sans-serif"), color : (fontColor ? fontColor : null)}}><div className="circle"><i class="fa-brands fa-youtube brandsClass"></i></div>Latest YouTube video</p>
             </div>
             <div
               className={`linkButton ${buttons ? buttons : "link2"}`}
-              style={{ width: "100%", height: "fit-content", borderRadius: "40px", backgroundColor: buttonColor, color: (buttonFontColor ? buttonFontColor : null) }}
+              style={{ width: "100%", height: "fit-content", backgroundColor: buttonColor, color: (buttonFontColor ? buttonFontColor : null) }}
             >
               <p style={{fontFamily: (fontType ? fontType : "sans-serif"), color : (fontColor ? fontColor : null)}}><div className="circle"><i class="fa-brands fa-square-instagram brandsClass"></i></div>Latest Instagram video</p>
             </div>

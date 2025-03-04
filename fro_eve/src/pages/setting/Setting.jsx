@@ -9,112 +9,107 @@ import Topsidebar from "../../components/topsidebar/Topsidebar"
 
 function Setting() {
   const params = useParams();
-  const [formdata, setFormData] = useState({
-    firstname: "",
-    lastname: "",
-    email: "",
-    password: "",
-    cpassword: "",
-    isvisible: false,
-  });
-
-  let data = JSON.parse(localStorage.getItem("user"));
-  useEffect(() => {
-    setFormData({
-      firstname : data.firstname,
-      lastname : data.lastname,
-      email: data.email,
-      password : "",
-      cpassword : "",
-      isvisible: false
-    })
-  }, [])
-
+  const [globalData, setGlobaldata] = useState({})
   const [errors, setErrors] = useState({});
   const [showPassword, setShowPassword] = useState(false);
   const [confirmPassword, setConfirmPassword] = useState("");
+  const [firstname, setFirstname] = useState("")
+  const [lastname, setLastname] = useState("")
+  const [email, setemail] = useState("")
+  const [password, setpassword] = useState("")
+  const [isSubmitting, setisSubmitting] = useState(false);
+
+  useEffect(() => {
+    let data = JSON.parse(localStorage.getItem("user"));
+    if(data) {
+      setGlobaldata(data);
+      setFirstname(data.firstname);
+      setLastname(data.lastname);
+      setemail(data.email);
+    }
+  }, [])
 
   async function submitHandler(event) {
     event.preventDefault();
+    setisSubmitting(true);
+
     const validationErrors = validateForm(formdata);
     if (Object.keys(validationErrors).length > 0) {
       setErrors(validationErrors);
     } else {
+        let tempData = globalData;
+        tempData.firstname = firstname
+        tempData.lastname = lastname
+        tempData.email = email
 
-      let result = fetch(`https://spark-backend-yyw3.onrender.com/updateuser/${params.id}`, {
-        method: 'put',
-        body: JSON.stringify({formdata}),
-        headers: {
-            'Content-Type': 'application/json'
-        }
-      }).then((result) => {
-          
+        let response = await fetch(`https://spark-backend-yyw3.onrender.com/api/v1/updateuser/${globalData._id}`, {
+          method: 'PUT',
+          headers: {
+            "Content-type" : "application/json"
+          },
+          body: JSON.stringify({password : password})
+        })
+
+        response = await response.json();
+
+        if(response.success) {
           toast.success("Sucessfully Saved ", {
-                position: "top-center",
-                autoClose: 1000,
-                hideProgressBar: false,
-                closeOnClick: true,
-                pauseOnHover: true,
-                draggable: true,
-                progress: undefined,
-                theme: "colored",
-                transition: Bounce,
-              });
-               setFormData({
-                firstname: "",
-                lastname: "",
-                email: "",
-                password: ""
-              });
-              setConfirmPassword("")
-              setErrors({});      
-              })
+            position: "top-center",
+            autoClose: 1000,
+            hideProgressBar: false,
+            closeOnClick: true,
+            pauseOnHover: true,
+            draggable: true,
+            progress: undefined,
+            theme: "colored",
+            transition: Bounce,
+          });
+
+          localStorage.setItem("user", JSON.stringify(tempData))
+          setGlobaldata(tempData)
+  
+          setFirstname("")
+          setLastname("")
+          setemail("")
+          setpassword("")
+          setConfirmPassword("")
+          setErrors({});    
+        }  
 
     }
+    setisSubmitting(false)
   }
-  function validateForm(data) {
+  function validateForm() {
     const errors = {};
-    if (!data.email.trim()) {
+    if (!email.trim()) {
       errors.email = "Email is required*";
-    } else if (!/\S+@\S+\.\S+/.test(data.email)) {
+    } else if (!/\S+@\S+\.\S+/.test(email)) {
       errors.email = "Email is invalid*";
     }
-    if (!data.password) {
+    if (!password) {
       errors.password = "Password is required*";
-    } else if (data.password.length < 8) {
+    } else if (password.length < 8) {
       errors.password = "The password must be at least 8 characters long*";
-    } else if (!/[a-z]/.test(data.password)) {
+    } else if (!/[a-z]/.test(password)) {
       errors.password =
         "Please choose a strong password that includes at least 1 lowercase letter*";
-    } else if (!/[A-Z]/.test(data.password)) {
+    } else if (!/[A-Z]/.test(password)) {
       errors.password =
         "Please choose a strong password that includes at least 1 uppercase letter*";
-    } else if (!/[0-9]/.test(data.password)) {
+    } else if (!/[0-9]/.test(password)) {
       errors.password =
         "Please choose a strong password that includes at least 1 number*";
-    } else if (!/[!@#$%^&*]/.test(data.password)) {
+    } else if (!/[!@#$%^&*]/.test(password)) {
       errors.password =
         "Please choose a strong password that includes at least 1 special character (!@#$%^&*)*";
     }
-    if (data.password !== confirmPassword) {
+    if (password !== confirmPassword) {
       errors.cpassword = "Passwords do not match*";
     }
     return errors;
   }
 
-  function changeHandle(event) {
-    const { type, checked, value, name } = event.target;
-    setFormData((prevData) => {
-      return {
-        ...prevData,
-        [name]: type === "checkbox" ? checked : value,
-      };
-    });
-    setErrors((prevErrors) => ({
-      ...prevErrors,
-      [name]: "",
-    }));
-  }
+  
   const togglePasswordVisibility = () => {
     setShowPassword(!showPassword);
   };
@@ -135,9 +130,9 @@ function Setting() {
                 type="text"
                 id="Fname"
                 className="input-formsave"
-                onChange={changeHandle}
+                onChange={(e) => setFirstname(e.target.value)}
                 name="firstname"
-                value={formdata.firstname}
+                value={firstname}
               />
               {errors.firstname && (
                 <span
@@ -161,9 +156,9 @@ function Setting() {
                 type="text"
                 id="Lname"
                 className="input-formsave"
-                onChange={changeHandle}
+                onChange={(e) => setLastname(e.target.value)}
                 name="lastname"
-                value={formdata.lastname}
+                value={lastname}
               />
               {errors.lastname && (
                 <span
@@ -187,9 +182,9 @@ function Setting() {
                 type="email"
                 id="email"
                 className="input-formsave"
-                onChange={changeHandle}
+                onChange={(e) => setemail(e.target.value)}
                 name="email"
-                value={formdata.email}
+                value={email}
               />
               {errors.email && (
                 <span
@@ -214,9 +209,9 @@ function Setting() {
                 type={showPassword ? "text" : "password"}
                 id="password"
                 className="input-formsave"
-                onChange={changeHandle}
+                onChange={(e) => setpassword(e.target.value)}
                 name="password"
-                value={formdata.password}
+                value={password}
               />
               <span
                   className="show-hide-btnsave"
@@ -271,7 +266,7 @@ function Setting() {
                 </span>
               )}
 
-              <button className="submit-btnsave">Save</button>
+              <button className="submit-btnsave">{isSubmitting ? "Saving..." : "Save"}</button>
             </form>
           </div>
         </div>

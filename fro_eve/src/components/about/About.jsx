@@ -38,9 +38,7 @@ function About() {
     e.preventDefault();
 
     try {
-      const response = fetch(
-        `https://spark-backend-yyw3.onrender.com/api/v1/updateuser/${data._id}`,
-        {
+      const response = fetch(`https://spark-backend-yyw3.onrender.com/api/v1/updateuser/${data._id}`, {
           method: "PUT",
           headers: {
             "Content-Type": "application/json",
@@ -57,42 +55,41 @@ function About() {
 
         if (response && response.success === false && response.message) {
           setError(response.message);
-        } else {
+          toast.error('Something went wrong', {
+            position: "top-center",
+            autoClose: 1000,
+            hideProgressBar: false,
+            closeOnClick: true,
+            pauseOnHover: false,
+            draggable: true,
+            progress: undefined,
+            theme: "colored",
+            transition: Bounce,
+          });
+        } 
+        else {
           const user = response.json().then((user) => {
             localStorage.setItem("user", JSON.stringify(user.data));
+
+            toast.success("Saved Category", {
+              position: "top-center",
+              autoClose: 1000,
+              hideProgressBar: false,
+              closeOnClick: true,
+              pauseOnHover: true,
+              draggable: true,
+              progress: undefined,
+              theme: "colored",
+              transition: Bounce,
+            });
+    
+            navigate("/dashboard");
+            window.location.reload()
           }
       )}});
+    } 
 
-      if(response.ok) {
-        toast.success("Saved Category", {
-                  position: "top-center",
-                  autoClose: 1000,
-                  hideProgressBar: false,
-                  closeOnClick: true,
-                  pauseOnHover: true,
-                  draggable: true,
-                  progress: undefined,
-                  theme: "colored",
-                  transition: Bounce,
-                });
-        
-        navigate("/dashboard");
-        window.location.reload()
-      } else {
-        toast.error('Something went wrong', {
-          position: "top-center",
-          autoClose: 1000,
-          hideProgressBar: false,
-          closeOnClick: true,
-          pauseOnHover: false,
-          draggable: true,
-          progress: undefined,
-          theme: "colored",
-          transition: Bounce,
-          });
-      }
-
-    } catch (error) {
+    catch (error) {
       toast.error('Something went wrong', {
         position: "top-center",
         autoClose: 1000,
