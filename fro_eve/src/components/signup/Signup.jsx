@@ -11,6 +11,7 @@ function Signup() {
   const [password, setpassword] = useState("")
   const [confirmPassword, setConfirmPassword] = useState("")
   const [isvisible, setIsvisible] = useState(false)
+  const [isSubmitting, setisSubmitting] = useState(false)
   
   const navigate = useNavigate();
 
@@ -18,8 +19,11 @@ function Signup() {
 
   async function submitHandler(event) {
     event.preventDefault();
+    setisSubmitting(true);
+
     const validationErrors = validateForm({firstname: firstname, lastname: lastname, email: email, password: password, cpassword: confirmPassword, isvisible: isvisible});
     if (Object.keys(validationErrors).length > 0) {
+      setisSubmitting(false)
       setErrors(validationErrors);
     } else {
       const response = await fetch("https://spark-backend-yyw3.onrender.com/api/v1/createuser", {
@@ -30,32 +34,47 @@ function Signup() {
         body: JSON.stringify({firstname : firstname, lastname: lastname, email: email, password: password}),
       })
         .then((response) => {
-          toast.success("Signup Sucessfully", {
-            position: "top-center",
-            autoClose: 1000,
-            hideProgressBar: false,
-            closeOnClick: true,
-            pauseOnHover: true,
-            draggable: true,
-            progress: undefined,
-            theme: "colored",
-            transition: Bounce,
-          });
-          if (!response.ok) {
-            throw new Error("Network response was not ok");
-          } 
-          else {
-            let data = response.json().then(
-              (data) => {
-                localStorage.setItem("user", JSON.stringify(data.user));
-                localStorage.setItem("token", JSON.stringify(data.token));
-                navigate("/about");
-                window.location.reload()
-              }
-            );
-          }
+          response = response.json().then((response) => {
+            if (!response.success) {
+              console.log(response)
+              toast.error('Something went wrong!', {
+                position: "top-center",
+                autoClose: 1000,
+                hideProgressBar: false,
+                closeOnClick: true,
+                pauseOnHover: false,
+                draggable: true,
+                progress: undefined,
+                theme: "colored",
+                transition: Bounce,
+              });
+
+              throw new Error("Network response was not ok");
+            } 
+            else {
+              localStorage.setItem("user", JSON.stringify(response.user));
+              localStorage.setItem("token", JSON.stringify(response.token));
+
+              toast.success("Signup Sucessfully", {
+                position: "top-center",
+                autoClose: 1000,
+                hideProgressBar: false,
+                closeOnClick: true,
+                pauseOnHover: true,
+                draggable: true,
+                progress: undefined,
+                theme: "colored",
+                transition: Bounce,
+              });
+              
+              setisSubmitting(false)
+              navigate("/about");
+              window.location.reload()
+            }
+          })
         })
         .catch((error) => {
+          console.log(error)
           setErrors({ submit: "An error occurred while submitting the form." });
           toast.error('Something went wrong!', {
             position: "top-center",
@@ -69,6 +88,8 @@ function Signup() {
             transition: Bounce,
             });
         });
+      
+      setisSubmitting(false)
       setfirstname("");
       setLastname("");
       setemail("");
@@ -306,7 +327,7 @@ function Signup() {
                 </span>
               )}
 
-              <button className="submit-btn">Create an account</button>
+              <button className="submit-btn" >{isSubmitting ? "Creating an account..." : "Create an account"}</button>
             </form>
           </div>
           <div className="form-footersign">

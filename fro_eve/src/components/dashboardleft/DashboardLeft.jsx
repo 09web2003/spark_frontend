@@ -7,10 +7,12 @@ function DashboardLeft() {
   const navigate = useNavigate();
   const [name, setname] = useState("")  
   const data = JSON.parse(localStorage.getItem("user"));
+  const [globaldata, setGlobaldata] = useState({});
 
   useEffect(() => {
     if(data) {
       setname(data.firstname + " " + data.lastname);
+      setGlobaldata(data);
     }
     if(window.location.pathname === '/dashboard') {
       const linkActive = document.getElementById('dash-link1');
@@ -48,7 +50,19 @@ function DashboardLeft() {
     activeId.classList.add('active');
   }
 
-  const handleSignout = () => {
+  const handleSignout = async (event) => {
+    event.preventDefault();
+
+    let response = await fetch(`https://spark-backend-yyw3.onrender.com/api/v1/updateuser/${globaldata._id}`, {
+      method : "PUT",
+      headers: {
+        "Content-type" : "application/json"
+      },
+      body: JSON.stringify(globaldata)
+    })
+
+    response = await response.json();
+
     toast.success("Logout Sucessfully", {
       position: "top-center",
       autoClose: 3000,

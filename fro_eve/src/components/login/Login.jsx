@@ -36,7 +36,9 @@ function Login() {
 
       const data = await response.json();
 
-      if (response.ok) {
+      console.log(data);
+
+      if (data) {
 
         toast.success("Login Sucessfully", {
           position: "top-center",
@@ -49,9 +51,16 @@ function Login() {
           theme: "colored",
           transition: Bounce,
         });
+
         localStorage.setItem("user", JSON.stringify(data.user));
         localStorage.setItem("token", JSON.stringify(data.token));
-        navigate("/dashboard");
+        
+        if(data.user.username.length == 0) {
+          navigate("/about");
+        }
+        else {
+          navigate("/dashboard");
+        }
         window.location.reload();
       } else {
         setError(data.message || "Login failed. Please try again.");
